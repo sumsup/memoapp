@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<p>Hello World!!</p>
+</body>
+<script>
+    var xhr = new XMLHttpRequest();
+
+    console.log("--------------- xhrOnReadyState -----------------");
+    console.log("xhr-readyState 1 : " + xhr.readyState);
+
+    xhr.open('get', 'http://localhost:8180/rest/memo/list', true);
+    xhr.send();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === xhr.DONE) {
+            console.log("xhr.DONE completed!");
+
+            if (this.readyState === 4 && this.status === 200) {
+
+                console.log("---------------- xhr is ready. status code : 200 -------------------");
+                console.log(xhr.responseText);
+            } else {
+                console.error(xhr.responseText);
+                alert('요청 실패!');
+            }
+
+        }
+    }
+
+    console.log("xhr-readyState 2 : " + xhr.readyState);
+    console.log("xhr.status : " + xhr.status);
+
+</script>
+</html>

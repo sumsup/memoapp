@@ -65,7 +65,7 @@
                 System.out.println("insert Query exception : " + e);
             }
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("members.jsp");
             
         } catch (Exception e) {
             //TODO: handle exception

@@ -13,7 +13,6 @@
     </form>
 </div>
 <hr>
-    
 
 <%!
     private int id = 0;
@@ -44,14 +43,14 @@
         
         try (Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery(selectMemoQuery);
-        
+
             while (rs.next()) {
                 id = rs.getInt("id");
                 nickname = rs.getString("nickname");
                 memo = rs.getString("memo");
                 createdAtTimestamp = rs.getTimestamp("created_at");
                 createdAt = rs.getDate("created_at");
-            
+
             %>
             <div>
             <p> 아이디 : <%= id %> </p>
@@ -114,7 +113,6 @@
         }
 
         response.sendRedirect("setMemo.jsp");
-
     }
 
 %>

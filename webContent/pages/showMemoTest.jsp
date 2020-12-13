@@ -2,6 +2,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="map.*" %>
 <%@ page import="map.dto.*" %>
+<%@ page import="map.rest.domain.memo.MemoDTO" %>
 <%-- <jsp:useBean id="memoList" class="map.SettingMemo" /> --%>
 <%
     SettingMemo memoList = new SettingMemo();
@@ -10,11 +11,6 @@
 %>
     <p> - 가입자 목록 - </p>
     <p> <%= memoDTO.getId() %> </p>
-    <p> <%= memoDTO.getEmail() %> </p>
-    <p> <%= memoDTO.getPassword() %> </p>
-    <p> <%= memoDTO.getNickname() %> </p>
-    <p> <%= memoDTO.getSex() %> </p>
-    <p> <%= memoDTO.getBirthday() %> </p>
 <%
     }
 %>

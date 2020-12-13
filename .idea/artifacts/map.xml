@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="map">
     <output-path>$PROJECT_DIR$/target/artifacts/map</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="map/web/map" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.48" />
@@ -12,6 +11,7 @@
           <element id="module-output" name="map" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="map/web/map" />
     </root>
   </artifact>
 </component>
